@@ -1,5 +1,6 @@
 .rainbow-text {
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -11,4 +12,8 @@
 .link-primary {
     cursor: pointer;
     text-decoration: underline;
+}
+
+.accordion.shadow {
+    border-radius: var(--bs-accordion-border-radius);
 }
