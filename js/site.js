@@ -11,10 +11,8 @@ document.querySelectorAll(".copy-url").forEach(element => {
 
 function GoTo(selector, updateHash) {
     let element = document.querySelector("[data-bs-target='" + selector + "']");
-    if (element != null) {
+    if (element != null && element.getAttribute("aria-expanded") != "true") {
         element.click();
-    } else {
-        console.log(selector);
     }
 }
 
@@ -32,6 +30,6 @@ function GoToHref(element) {
     let url = element.href;
     let parts = url.split('#');
     if (parts.length > 1) {
-        GoTo("#" + parts.pop());
+        GoTo(seletor);
     }
 }

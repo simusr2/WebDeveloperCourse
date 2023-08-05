@@ -7,3 +7,8 @@
 .change-cursor {
     cursor: help;
 }
+
+.link-primary {
+    cursor: pointer;
+    text-decoration: underline;
+}
