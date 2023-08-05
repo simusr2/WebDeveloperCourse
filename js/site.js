@@ -1,10 +1,20 @@
 GoToLoad();
 
+const previewerModal = new bootstrap.Modal('#previewer-modal', {
+    keyboard: false
+});
+
 document.querySelectorAll(".copy-url").forEach(element => {
     element.addEventListener("click", function () {
         let anchor = this.parentElement.parentElement.parentElement.id;
         let url = window.location.protocol + "//" + window.location.hostname + "/#" + anchor;
         navigator.clipboard.writeText(url);
+    });
+})
+
+document.querySelectorAll(".resource-button").forEach(element => {
+    element.addEventListener("click", function () {
+        ShowResource(this);
     });
 })
 
@@ -33,3 +43,31 @@ function GoToHref(element) {
         GoTo(seletor);
     }
 }
+
+function ShowResource(element) {
+    let url = element.getAttribute("data-href");
+    let type = element.getAttribute("data-type");
+
+    let anchor = document.getElementById("external-link-anchor");
+
+    anchor.href = url;
+
+    let object = previewerModal._element.querySelector("object");
+    let iframe = previewerModal._element.querySelector("iframe");
+
+    if (type == "pdf") {
+        object.data = url;
+        object.classList.remove("d-none");
+        iframe.classList.add("d-none");
+    } else if (type == "html") {
+        iframe.src = url;
+        object.classList.add("d-none");
+        iframe.classList.remove("d-none");
+    }
+
+    let htmlTitle = element.parentElement.querySelector("h4").innerHTML;
+    previewerModal._element.querySelector(".modal-title").innerHTML = htmlTitle;
+    previewerModal.show();
+}
+
+//myModal.show();

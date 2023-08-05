@@ -17,3 +17,8 @@
 .accordion.shadow {
     border-radius: var(--bs-accordion-border-radius);
 }
+
+#previewer-modal object,
+#previewer-modal iframe {
+    min-height: 550px;
+}
