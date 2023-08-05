@@ -1,15 +1,30 @@
 GoToLoad();
 
-function GoTo(selector) {
+document.querySelectorAll(".copy-url").forEach(element => {
+    element.addEventListener("click", function () {
+        let anchor = this.parentElement.parentElement.parentElement.id;
+        let url = window.location.protocol + "//" + window.location.hostname + "/#" + anchor;
+        navigator.clipboard.writeText(url);
+    });
+})
+
+
+function GoTo(selector, updateHash) {
     let element = document.querySelector("[data-bs-target='" + selector + "']");
-    element.click();
+    if (element != null) {
+        element.click();
+    } else {
+        console.log(selector);
+    }
 }
 
 function GoToLoad() {
     let accordionSection = window.location.hash;
 
     if (accordionSection.length) {
-        GoTo(accordionSection);
+        GoTo(accordionSection, true);
+    } else {
+        GoTo("#intro", false);
     }
 }
 

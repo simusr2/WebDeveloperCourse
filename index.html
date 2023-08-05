@@ -14,7 +14,7 @@
 <body class="d-flex flex-column h-100">
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Corso Sviluppatore Web</a>
+            <a class="navbar-brand" href="/">Corso Sviluppatore Web</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -71,18 +71,22 @@
         <div class="accordion" id="course-accordion">
             <div class="accordion-item">
                 <h3 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#intro"
-                        aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#intro" aria-expanded="false" aria-controls="collapseOne">
                         Introduzione
                     </button>
                 </h3>
-                <div id="intro" class="accordion-collapse collapse show" data-bs-parent="#course-accordion">
+                <div id="intro" class="accordion-collapse collapse" data-bs-parent="#course-accordion">
                     <div class="accordion-body">
-                        <p>
-                        <h4>Introduzione a Internet e al WWW <sup>PM</sup></h4>
-                        <a
-                            href="https://pages.di.unipi.it/milazzo/teaching/AA1011-WebProg/slides/1-Introduzione.pdf">Slides</a>
-                        </p>
+                        <div class="mb-2">
+                            <h4>Introduzione a Internet e al WWW <sup>PM</sup></h4>
+                            <a
+                                href="https://pages.di.unipi.it/milazzo/teaching/AA1011-WebProg/slides/1-Introduzione.pdf">Slides</a>
+                        </div>
+                        <div class="mb-2 text-end">
+                            <button type="button" class="bi bi-link-45deg ms-2 copy-url btn btn-primary float-right"
+                                title="Copia URL"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,19 +100,23 @@
                 </h3>
                 <div id="html" class="accordion-collapse collapse" data-bs-parent="#course-accordion">
                     <div class="accordion-body">
-                        <p>
-                        <h4>Il Linguaggio HTML (I parte): introduzione ad HTML, struttura di un documento,
-                            paragrafi, liste, tabelle, collegamenti ipertestuali, immagini, image maps
-                            <sup>PM</sup>
-                        </h4>
-                        <a
-                            href="https://pages.di.unipi.it/milazzo/teaching/AA1011-WebProg/slides/3-HTML-ParteI.pdf">Slides</a>
-                        </p>
-                        <p>
-                        <h4>Il linguaggio HTML (II parte) <sup>PM</sup></h4>
-                        <a
-                            href="https://pages.di.unipi.it/milazzo/teaching/AA1011-WebProg/slides/4-HTML-ParteII.pdf">Slides</a>
-                        </p>
+                        <div class="mb-2">
+                            <h4>Il Linguaggio HTML (I parte): introduzione ad HTML, struttura di un documento,
+                                paragrafi, liste, tabelle, collegamenti ipertestuali, immagini, image maps
+                                <sup>PM</sup>
+                            </h4>
+                            <a
+                                href="https://pages.di.unipi.it/milazzo/teaching/AA1011-WebProg/slides/3-HTML-ParteI.pdf">Slides</a>
+                        </div>
+                        <div class="mb-2">
+                            <h4>Il linguaggio HTML (II parte) <sup>PM</sup></h4>
+                            <a
+                                href="https://pages.di.unipi.it/milazzo/teaching/AA1011-WebProg/slides/4-HTML-ParteII.pdf">Slides</a>
+                        </div>
+                        <div class="mb-2 text-end">
+                            <button type="button" class="bi bi-link-45deg ms-2 copy-url btn btn-primary float-right"
+                                title="Copia URL"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -122,11 +130,17 @@
                 </h3>
                 <div id="css" class="accordion-collapse collapse" data-bs-parent="#course-accordion">
                     <div class="accordion-body">
-                        <p>
-                        <h4><span class="rainbow-text change-cursor">Cascading Style Sheets (CSS)</span> <sup>PM</sup>
-                        </h4>
-                        <a href="https://pages.di.unipi.it/milazzo/teaching/AA1011-WebProg/slides/5-CSS.pdf">Slides</a>
-                        </p>
+                        <div class="mb-2">
+                            <h4><span class="rainbow-text change-cursor">Cascading Style Sheets (CSS)</span>
+                                <sup>PM</sup>
+                            </h4>
+                            <a
+                                href="https://pages.di.unipi.it/milazzo/teaching/AA1011-WebProg/slides/5-CSS.pdf">Slides</a>
+                        </div>
+                        <div class="mb-2 text-end">
+                            <button type="button" class="bi bi-link-45deg ms-2 copy-url btn btn-primary float-right"
+                                title="Copia URL"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -140,20 +154,24 @@
                 </h3>
                 <div id="javascript" class="accordion-collapse collapse" data-bs-parent="#course-accordion">
                     <div class="accordion-body">
-                        <p>
-                        <h3>JavaScript (I parte): aspetti di base <sup>PM</sup></h3>
-                        <a
-                            href="https://pages.di.unipi.it/milazzo/teaching/AA1011-WebProg/slides/6-JavaScript-ParteI.pdf">Slides</a>
-                        </p>
-                        <p>
-                        <h3>JavaScript (II parte): complementi <sup>PM</sup></h3>
-                        <a
-                            href="https://pages.di.unipi.it/milazzo/teaching/AA1011-WebProg/slides/7-JavaScript-ParteII.pdf">Slides</a>
-                        </p>
-                        <p>
-                        <h3>Variabili globali e locali: lo scope <sup>H.IT</sup></h3>
-                        <a href="https://www.html.it/pag/15218/passaggio-dei-dati">Articolo</a>
-                        </p>
+                        <div class="mb-2">
+                            <h3>JavaScript (I parte): aspetti di base <sup>PM</sup></h3>
+                            <a
+                                href="https://pages.di.unipi.it/milazzo/teaching/AA1011-WebProg/slides/6-JavaScript-ParteI.pdf">Slides</a>
+                        </div>
+                        <div class="mb-2">
+                            <h3>JavaScript (II parte): complementi <sup>PM</sup></h3>
+                            <a
+                                href="https://pages.di.unipi.it/milazzo/teaching/AA1011-WebProg/slides/7-JavaScript-ParteII.pdf">Slides</a>
+                        </div>
+                        <div class="mb-2">
+                            <h3>Variabili globali e locali: lo scope <sup>H.IT</sup></h3>
+                            <a href="https://www.html.it/pag/15218/passaggio-dei-dati">Articolo</a>
+                        </div>
+                        <div class="mb-2 text-end">
+                            <button type="button" class="bi bi-link-45deg ms-2 copy-url btn btn-primary float-right"
+                                title="Copia URL"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -167,13 +185,17 @@
                 </h3>
                 <div id="crediti" class="accordion-collapse collapse" data-bs-parent="#course-accordion">
                     <div class="accordion-body">
-                        <p>
+                        <div class="mb-2">
                             <sup>PM</sup> <a href="https://pages.di.unipi.it/milazzo">Paolo Milazzo - Università di
                                 Pisa</a>
-                        </p>
-                        <p>
+                        </div>
+                        <div class="mb-2">
                             <sup>H.IT</sup> <a href="https://html.it/">HTML.it</a>
-                        </p>
+                        </div>
+                        <div class="mb-2 text-end">
+                            <button type="button" class="bi bi-link-45deg ms-2 copy-url btn btn-primary float-right"
+                                title="Copia URL"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -188,14 +210,14 @@
                 <div class="col-lg-12 mb-3">
                     <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none"
                         href="https://simoneanile.com/" aria-label="Bootstrap">
-                        <img src="https://simoneanile.com/images/simusr2.v2.min.png" alt="Simone Anile"
-                            class="rounded-circle" width="50" />
+                        <img src="images/simusr2.v2.min.png" alt="Simone Anile" class="rounded-circle" width="50" />
 
                         <span class="fs-5 ms-2">Simone Anile</span>
                     </a>
                     <ul class="list-unstyled small">
                         <li class="mb-2">Made with &#10084;&#65039; in &#127470;&#127481; - v0.4.1</li>
-                        <li class="mb-2">Codice sorgente su <a href="https://github.com/simusr2/WebDeveloperCourse"><i class="bi bi-github mr-2" title="GitHub"></i> GitHub</a> -
+                        <li class="mb-2">Codice sorgente su <a href="https://github.com/simusr2/WebDeveloperCourse"><i
+                                    class="bi bi-github mr-2" title="GitHub"></i> GitHub</a> -
                             Pubblicato grazie a <a href="https://pages.github.com">GitHub Pages</a></li>
                         <li class="mb-2">&copy; 2023 Simone Anile - I contenuti inseriti nel sito sono di proprietà dei
                             rispettivi autori citati. La lista degli acronimi è disponibile nella sezione <a
