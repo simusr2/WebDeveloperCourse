@@ -1,7 +1,18 @@
 GoToLoad();
 
-const previewerModal = new bootstrap.Modal('#previewer-modal', {
+const previewerModalSelector = '#previewer-modal';
+
+const previewerModal = new bootstrap.Modal(previewerModalSelector, {
     keyboard: false
+});
+
+const previewerModalElement = document.querySelector(previewerModalSelector);
+
+previewerModalElement.addEventListener('hidden.bs.shown', () => {
+    let object = previewerModalElement.querySelector("object");
+    let iframe = previewerModalElement.querySelector("iframe");
+    object.data = object.data;
+    iframe.src = iframe.src;
 });
 
 document.querySelectorAll(".copy-url").forEach(element => {
@@ -52,8 +63,8 @@ function ShowResource(element) {
 
     anchor.href = url;
 
-    let object = previewerModal._element.querySelector("object");
-    let iframe = previewerModal._element.querySelector("iframe");
+    let object = previewerModalElement.querySelector("object");
+    let iframe = previewerModalElement.querySelector("iframe");
 
     if (type == "pdf") {
         object.data = url;
