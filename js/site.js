@@ -66,11 +66,11 @@ function ShowResource(element) {
     let object = previewerModalElement.querySelector("object");
     let iframe = previewerModalElement.querySelector("iframe");
 
-    if (type == "pdf") {
+    if (false && type == "pdf") {
         object.data = url;
         object.classList.remove("d-none");
         iframe.classList.add("d-none");
-    } else if (type == "html") {
+    } else if (true || type == "html") {
         iframe.src = url;
         object.classList.add("d-none");
         iframe.classList.remove("d-none");
