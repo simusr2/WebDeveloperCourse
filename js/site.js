@@ -8,7 +8,7 @@ const previewerModal = new bootstrap.Modal(previewerModalSelector, {
 
 const previewerModalElement = document.querySelector(previewerModalSelector);
 
-previewerModalElement.addEventListener('hidden.bs.shown', () => {
+previewerModalElement.addEventListener('shown.bs.modal', () => {
     let object = previewerModalElement.querySelector("object");
     let iframe = previewerModalElement.querySelector("iframe");
     object.data = object.data;
